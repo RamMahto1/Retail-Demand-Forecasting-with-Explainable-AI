@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retail Demand Forecasting</title>
+</head>
+<body>
+    <h2>Retail Demand Forecasting</h2>
+    <form method="POST">
+        Store ID: <input type="text" name="Store_ID"><br>
+        Product ID: <input type="text" name="Product_ID"><br>
+        Category: <input type="text" name="Category"><br>
+        Region: <input type="text" name="Region"><br>
+        Weather Condition: <input type="text" name="Weather_Condition"><br>
+        Seasonality: <input type="text" name="Seasonality"><br>
+        Inventory Level: <input type="text" name="Inventory_Level"><br>
+        Units Ordered: <input type="text" name="Units_Ordered"><br>
+        Price: <input type="text" name="Price"><br>
+        Discount: <input type="text" name="Discount"><br>
+        Holiday Promotion: <input type="text" name="Holiday_Promotion"><br>
+        Competitor Pricing: <input type="text" name="Competitor_Pricing"><br>
+        Date (YYYY-MM-DD): <input type="text" name="Date"><br>
+        Units Sold Lag1: <input type="text" name="Units_Sold_Lag1"><br>
+        Units Sold Lag7: <input type="text" name="Units_Sold_Lag7"><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>Predicted Units Sold: {{ prediction }}</h3>
+    {% endif %}
+    
+    {% if error %}
+        <h3 style="color:red;">Error: {{ error }}</h3>
+    {% endif %}
+</body>
+</html>
