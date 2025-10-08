@@ -74,7 +74,7 @@ You can submit input either through the HTML form or via a JSON payload:
 retail_demand_forecasting/
 │
 ├── artifacts/          # Stores trained models and preprocessors
-├── src/                # Python modules: utils, logger, exception
+├── src/                # Python modules: utils, logger, exception, data ingestion, data transformation, model trainer, data validation
 ├── templates/          # HTML templates for the Flask app
 ├── main.py             # Script to train and evaluate models
 ├── app.py              # Flask web app
